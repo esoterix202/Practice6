@@ -1,0 +1,154 @@
+header {
+    display: block;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba($black, 0.4);
+    .header-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        .right-content {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.main-nav {
+    display: block;
+    ul {
+        display: flex;
+        position: relative;
+        font-size: 0;
+    }
+    li {
+        white-space: nowrap;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.search-item {
+    position: relative;
+    margin: 0 20px;
+    .search-icon {
+        font-size: 18px;
+        color: $blue;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+            color: $red;
+            text-shadow: 0px 0px 1px rgba($black, .5);
+        }
+    }
+}
+
+.btn-retail {
+    padding: 10px;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    &:hover {
+        border: 1px solid $red;
+        box-shadow: 0px 0px 5px 1px rgba($black, 0.2);
+    }
+}
+
+.mob-icon {
+    display: none;
+    cursor: pointer;
+    color: $blue;
+}
+
+@media (max-width: 1024px) {
+    .header-logo {
+        img {
+            max-width: 90%;
+        }
+    }
+      
+    nav ul li {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        a {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header-logo {
+        img {
+            max-width: 70%;
+        }
+    }
+    .main-nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        background-color: $grey;
+        >ul {
+            flex-direction: column;
+            >li {
+                margin-bottom: 15px;
+                padding: 15px 15px 0 15px;
+                &:not(:first-child) {
+                    border-top: 1px solid $white;
+                }
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+                >a {
+                    display: block;
+                    text-transform: initial;
+                    font-size: 14px;
+                    color: $white;
+                }
+            }
+            .toggle-list {
+                position: relative;
+                &:after {
+                    content: "\f0de";
+                    height: 18px;
+                    width: 18px;
+                    position: absolute;
+                    top: 2px;
+                    right: 5px;
+                    text-align: center;
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 18px;
+                    font-weight: 900;
+                    color: $light-grey;
+                    transition: transform .3s;
+                }
+            }
+        }
+        &:after {
+            top: -18px;
+            right: 20px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-bottom-color: $grey;
+            border-width: 9px;
+            margin-left: -9px;
+        }
+    }
+    .btn-retail {
+        display: none;
+    }
+    .mob-icon {
+        display: block;
+    }
+}

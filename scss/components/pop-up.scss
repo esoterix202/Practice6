@@ -1,0 +1,72 @@
+.pop-up {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, .8);
+    .pop-up-content {
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        max-width: 870px;
+        padding: 40px;
+        background-color: $white;
+    }
+    .biography {
+        padding: 20px;
+    }
+    .close-pop-up {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: $grey;
+        transition: all .3s;
+        &:hover {
+            color: $red;
+        }
+    }
+    iframe {
+        width: 790px;
+        height: 525px;
+    }
+    .director {
+        display: flex;
+        pointer-events: none;
+        .content-photo {
+            height: 300px;
+            min-width: 22%;
+            margin-right: 20px;
+            img {
+                height: 300px;
+                width: 100%;
+            }
+        }
+        .text-image {
+            min-width: 75%;
+            text-align: left;
+            h2,
+            p {
+                font-size: 14px;
+                color: $dark-grey;
+            }
+            p {
+                color: $dark-grey;
+            }
+            p:not(:last-child) {
+                margin-bottom: 5px;
+            }
+            p:not(.hidden-p) {
+                font-weight: 500;
+            }
+        }
+        .light-overlay {
+            display: none;
+        }
+    }
+}

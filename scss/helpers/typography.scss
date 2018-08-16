@@ -1,0 +1,114 @@
+body {
+	width: 100%;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	background-image: url('/images/background.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 900;
+	color: $blue;
+
+}
+
+h2 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	color: $black;
+}
+
+h3 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	color: $black;
+}
+
+p {
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 400;
+	color: $dark-grey;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all .3s;
+	color: $blue;
+	&:hover {
+		color: $red;
+		text-shadow: 0px 0px 1px rgba($black, .5);
+	}
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+}
+
+nav ul li a {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+aside ul li a {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+main {
+	p {
+		font-size: 16px;
+		font-weight: 400;
+		color: $dark-grey;
+	}
+}
+
+footer {
+	span,
+	a {
+		font-size: 14px;
+		font-weight: 700;
+		color: $white;
+	}
+	.sitemap a, p a {
+		border-bottom: 2px solid transparent;
+		&:hover {
+			border-bottom: 2px solid $light-grey;
+			color: $white;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	nav ul li a {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 767px) {
+	h2 {
+		font-size: 16px;
+	}
+
+	h3 {
+		font-size: 14px;
+	}
+}

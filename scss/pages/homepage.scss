@@ -1,0 +1,214 @@
+.main-content {
+    width: 100%;
+}
+
+.main-wrap {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .col-1-4:not(:last-child) {
+        margin-right: 30px;
+    }
+    .col-1-4:first-child .content-box {
+        padding-top: 30px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+    .col-1-4:last-child .content-box {
+        height: 306px;
+        padding: 30px 20px;
+        background-color: rgba($dark-grey, .2);
+        box-shadow: 0px .5px 1px .3px rgba($black, 0.1);
+    }
+}
+
+.content-box {
+    height: 100%;
+    width: 100%;
+    .section {
+        border-bottom: 1px solid $grey;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    .date {
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        color: $grey;
+    }
+    a {
+        margin-bottom: 30px;
+    }
+    .content-photo {
+        height: 300px;
+        margin-bottom: 30px;
+        img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+        }
+    }
+    .text-image {
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 5px;
+    }
+    .price {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 30px;
+        color: $black;
+        &:before {
+            height: 15px;
+            width: 15px;
+            line-height: 15px;
+            margin-right: 5px;
+            content: '\f0de';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 15px;
+            font-weight: 700;
+            color: $red;
+        }
+        .currency {
+            font-size: 24px;
+            color: $black;
+        }
+    }
+    .percentage {
+        font-size: 14px;
+        .first {
+            margin-right: 5px;
+        }
+        .first,
+        .second {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    }
+    .space-border {
+        display: block;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $grey;
+    }
+    .icon {
+        &:before {
+            height: 15px;
+            width: 15px;
+            line-height: 15px;
+            margin-right: 5px;
+            content: '\f0da';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 15px;
+            font-weight: 700;
+            color: $black;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-photo {
+        height: 300px;
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-row {
+        flex-wrap: wrap;
+        .col-1-4:not(:last-child) {
+            width: 31%;
+        }
+        .col-1-4:last-child,
+        .col-1-4:nth-last-child(2) {
+            margin-right: 0;
+        }
+        .col-1-4:nth-last-child(2),
+        .col-1-4:not(:last-child) {
+            margin-right: 0;
+        }
+        .col-1-4:last-child {
+            width: 100%;
+            margin-top: 30px;
+            text-align: left;
+            .content-box {
+                display: flex;
+                height: 180px;
+                .col {
+                    width: 50%;
+                }
+            }
+            .space-border {
+                padding-top: 0;
+                border-top: 0;
+            }
+            .border-left {
+                padding-left: 20px;
+                border-left: 1px solid $grey;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main-wrap {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .content-row {
+        flex-direction: column;
+        .col-1-4 {
+            text-align: center;
+            &:not(:last-child) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .col-1-4:first-child .content-box {
+            text-align: center;
+        }
+        .col-1-4:last-child {
+            margin-top: 0;
+            .content-box {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                .col {
+                    width: 100%;
+                }
+            }
+            .space-border {
+                padding-top: 20px;
+                border-top: 1px solid $grey;
+            }
+            .border-left {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+        .content-photo {
+            margin-bottom: 20px;
+                img {
+                    width: initial;
+                    height: auto;
+                }
+        }
+        .text-image {
+            margin-bottom: 5px;
+        }
+    }
+}
